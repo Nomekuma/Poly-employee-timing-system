@@ -1,6 +1,7 @@
 # Employee Salary Management System
 Test case 1:
 
+```c
 Enter the number of employees: 2
 Enter hourly salary rate for Employee 1: 270
 Enter hourly salary rate for Employee 2: 250
@@ -57,3 +58,4 @@ Enter number of months Employee 2 has worked: 0
 ❌ Not eligible for 14th-month salary. (0 months worked)
 Enter the number of dependents for Employee 2: 0
 Employee 2 - Annual Salary: Rs 492000.00, Deduction: Rs 0.00, Taxable Income: Rs 492000.00, Tax Payable: Rs 17640.00
+```
