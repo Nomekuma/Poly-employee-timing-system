@@ -161,9 +161,9 @@ void calculateSalaries(int employees, float hours[employees][MAX_DAYS], float sa
 
         // Determine if the employee qualifies
         if (monthsWorked >= MONTHS_FOR_14TH_SALARY) {
-            printf("✅ Eligible for 14th-month salary! Bonus: Rs %.2f\n", monthlySalary);
+            printf("Eligible for 14th-month salary! Bonus: Rs %.2f\n", monthlySalary);
         } else {
-            printf("❌ Not eligible for 14th-month salary. (%d months worked)\n", monthsWorked);
+            printf("Not eligible for 14th-month salary. (%d months worked)\n", monthsWorked);
         }
 
         // Calculate tax
