@@ -149,18 +149,6 @@ void calculateSalaries(int employees, float hours[employees][MAX_DAYS], float sa
         printf("Monthly Salary: Rs %.2f\n", monthlySalary);
         printf("Annual Salary: Rs %.2f\n", annualSalary);
 
-
-        // TODO: Check MRA to be sure if 12 months is part of eligibility
-        // // Check eligibility for the 14th-month salary
-        // int monthsWorked;
-        // do {
-        //     printf("Enter number of months Employee %d has worked: ", i + 1);
-        //     scanf("%d", &monthsWorked);
-        //     if (monthsWorked < 0) {
-        //         printf("Invalid input! Months worked cannot be negative.\n");
-        //     }
-        // } while (monthsWorked < 0);
-
         // Determine if the employee qualifies
         if (monthlySalary <= SALARY_ELIGIBLE_14) {
             printf("Eligible for 14th-month salary! Bonus: Rs %.2f\n", monthlySalary);
