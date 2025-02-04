@@ -45,7 +45,7 @@ Weekly Salary: Rs 10800.00
 Monthly Salary: Rs 43200.00
 Annual Salary: Rs 518400.00
 Enter number of months Employee 1 has worked: 12
-✅ Eligible for 14th-month salary! Bonus: Rs 43200.00
+Eligible for 14th-month salary! Bonus: Rs 43200.00
 Enter the number of dependents for Employee 1: 1
 Employee 1 - Annual Salary: Rs 518400.00, Deduction: Rs 110000.00, Taxable Income: Rs 408400.00, Tax Payable: Rs 1840.00
 
@@ -55,7 +55,7 @@ Weekly Salary: Rs 10250.00
 Monthly Salary: Rs 41000.00
 Annual Salary: Rs 492000.00
 Enter number of months Employee 2 has worked: 0
-❌ Not eligible for 14th-month salary. (0 months worked)
+Not eligible for 14th-month salary. (0 months worked)
 Enter the number of dependents for Employee 2: 0
 Employee 2 - Annual Salary: Rs 492000.00, Deduction: Rs 0.00, Taxable Income: Rs 492000.00, Tax Payable: Rs 17640.00
 ```
