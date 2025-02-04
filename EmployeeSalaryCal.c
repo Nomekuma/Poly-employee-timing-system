@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define MAX_DAYS 5
-#define MONTHS_FOR_14TH_SALARY 12
+#define SALARY_ELIGIBLE_14 50000.00
 
 const char *daysOfWeek[MAX_DAYS] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
@@ -111,7 +111,7 @@ void calculateTax(float annualSalary, int dependents, int employeeNum) {
     else if (dependents >= 4) deduction = 355000;
     
     float taxableIncome = annualSalary - deduction;
-    float tax = 0;
+    float tax = 0.00;
 
     if (taxableIncome > 390000) tax += (taxableIncome - 390000) * 0.10;
     if (taxableIncome > 430000) tax += (taxableIncome - 430000) * 0.12;
@@ -120,7 +120,7 @@ void calculateTax(float annualSalary, int dependents, int employeeNum) {
     if (taxableIncome > 1630000) tax += (taxableIncome - 1630000) * 0.18;
     if (taxableIncome > 2130000) tax += (taxableIncome - 2130000) * 0.20;
     
-    if (tax < 0) tax = 0;
+    if (tax < 0) tax = 0.00;
     
     printf("Employee %d - Annual Salary: Rs %.2f, Deduction: Rs %.2f, Taxable Income: Rs %.2f, Tax Payable: Rs %.2f\n", employeeNum, annualSalary, deduction, taxableIncome, tax);
 }
@@ -149,21 +149,23 @@ void calculateSalaries(int employees, float hours[employees][MAX_DAYS], float sa
         printf("Monthly Salary: Rs %.2f\n", monthlySalary);
         printf("Annual Salary: Rs %.2f\n", annualSalary);
 
-        // Check eligibility for the 14th-month salary
-        int monthsWorked;
-        do {
-            printf("Enter number of months Employee %d has worked: ", i + 1);
-            scanf("%d", &monthsWorked);
-            if (monthsWorked < 0) {
-                printf("Invalid input! Months worked cannot be negative.\n");
-            }
-        } while (monthsWorked < 0);
+
+        // TODO: Check MRA to be sure if 12 months is part of eligibility
+        // // Check eligibility for the 14th-month salary
+        // int monthsWorked;
+        // do {
+        //     printf("Enter number of months Employee %d has worked: ", i + 1);
+        //     scanf("%d", &monthsWorked);
+        //     if (monthsWorked < 0) {
+        //         printf("Invalid input! Months worked cannot be negative.\n");
+        //     }
+        // } while (monthsWorked < 0);
 
         // Determine if the employee qualifies
-        if (monthsWorked >= MONTHS_FOR_14TH_SALARY) {
+        if (monthlySalary <= SALARY_ELIGIBLE_14) {
             printf("Eligible for 14th-month salary! Bonus: Rs %.2f\n", monthlySalary);
         } else {
-            printf("Not eligible for 14th-month salary. (%d months worked)\n", monthsWorked);
+            printf("Not eligible for 14th-month salary. (Due to Salary exceeding Rs %.2f)\n", SALARY_ELIGIBLE_14);
         }
 
         // Calculate tax
